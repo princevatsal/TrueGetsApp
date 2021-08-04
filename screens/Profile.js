@@ -162,6 +162,7 @@ export default function Profile({navigation}) {
             </Text>
           </TouchableOpacity>
         </ScrollView>
+        <View style={{marginBottom:'15%'}}></View>
       </View>
       </SafeAreaView>
       <BottomBar active={'Profile'} navigation={navigation} />

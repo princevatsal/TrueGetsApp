@@ -86,7 +86,7 @@ export default function Login({navigation}) {
             }} onPress={()=> navigation.navigate('AgentSignup')}>
             <Text
               style={{textAlign: 'center', fontSize: 18, fontWeight: 'bold',color:'white'}}>
-              Agent Signup
+              Model Signup
             </Text>
           </TouchableOpacity>
         </View>

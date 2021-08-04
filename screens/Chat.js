@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {View, Text, Image, StyleSheet,ScrollView,SafeAreaView} from 'react-native';
+import {View, Text, Image, StyleSheet,ScrollView,SafeAreaView, TouchableOpacity} from 'react-native';
 import logo from '../images/logo_white.png';
 import Model1 from '../images/Model1.jpg';
 import Model2 from '../images/Model2.jpg';
@@ -21,9 +21,9 @@ export default function Chat({navigation}) {
       </View>
       <ScrollView style={{marginBottom:'2%'}} showsVerticalScrollIndicator={false}>
         <View style={styles.chattab}>
-          <View style={{justifyContent: 'center'}}>
+          <TouchableOpacity style={{justifyContent: 'center'}} onPress={()=> navigation.navigate('AgentProfile')}>
             <Image source={Model1} style={styles.chatimage} />
-          </View>
+          </TouchableOpacity>
           <View style={styles.textview}>
             <Text style={styles.name}>Sample Name</Text>
             <Text numberOfLines={1} style={styles.message}>
@@ -34,9 +34,9 @@ export default function Chat({navigation}) {
           </View>
         </View>
         <View style={styles.chattab}>
-          <View style={{justifyContent: 'center'}}>
+          <TouchableOpacity style={{justifyContent: 'center'}} onPress={()=> navigation.navigate('AgentProfile')}>
             <Image source={Model2} style={styles.chatimage} />
-          </View>
+          </TouchableOpacity>
           <View style={styles.textview}>
             <Text style={styles.name}>Sample Name</Text>
             <Text numberOfLines={1} style={styles.message}>
@@ -47,9 +47,9 @@ export default function Chat({navigation}) {
           </View>
         </View>
         <View style={styles.chattab}>
-          <View style={{justifyContent: 'center'}}>
+          <TouchableOpacity style={{justifyContent: 'center'}} onPress={()=> navigation.navigate('AgentProfile')}>
             <Image source={Model3} style={styles.chatimage} />
-          </View>
+          </TouchableOpacity>
           <View style={styles.textview}>
             <Text style={styles.name}>Sample Name</Text>
             <Text numberOfLines={1} style={styles.message}>

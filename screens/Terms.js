@@ -201,6 +201,20 @@ export default function Terms({navigation}) {
             damages.
           </Text>
         </Unorderedlist>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#ff389c',
+            alignSelf: 'center',
+            paddingVertical: 10,
+            borderRadius: 30,
+            width: '80%',
+            marginBottom:'10%'
+          }}
+          onPress={() => navigation.navigate('AgentStack')}>
+          <Text style={{textAlign: 'center', fontSize: 18, color: 'white'}}>
+            I accept the conditions
+          </Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );

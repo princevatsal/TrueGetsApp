@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
+  Alert,
 } from 'react-native';
 import logo from '../images/logo_white.png';
 import back from '../images/back.png';
@@ -21,7 +22,7 @@ export default function Subscriptions({navigation}) {
         </View>
         <TouchableOpacity
           style={{justifyContent: 'center', flex: 1, marginLeft: 10}}
-          onPress={() => navigation.navigate('Profile')}>
+          onPress={() => navigation.navigate('Home')}>
           <Image source={back} style={{width: 30, height: 20}} />
         </TouchableOpacity>
       </View>
@@ -56,7 +57,19 @@ export default function Subscriptions({navigation}) {
             <Text style={styles.benfitstext}>Pricing</Text>
             <Text style={styles.benfitstext}>50$</Text>
           </View>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={()=>{
+            Alert.alert(
+              "Thank You !",
+              "",
+              [
+                {
+                  text: "Ok",
+                  onPress: () => navigation.navigate('Chat'),
+                  style: "ok",
+                },
+              ],
+            );
+          }}>
               <Text style={styles.buttontext}>Select Pack</Text>
           </TouchableOpacity>
         </View>
@@ -80,7 +93,19 @@ export default function Subscriptions({navigation}) {
             <Text style={styles.benfitstext}>Pricing</Text>
             <Text style={styles.benfitstext}>100$</Text>
           </View>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}onPress={()=>{
+            Alert.alert(
+              "Thank You !",
+              "",
+              [
+                {
+                  text: "Ok",
+                  onPress: () => navigation.navigate('Chat'),
+                  style: "ok",
+                },
+              ],
+            );
+          }}>
               <Text style={styles.buttontext}>Select Pack</Text>
           </TouchableOpacity>
         </View>
@@ -104,7 +129,19 @@ export default function Subscriptions({navigation}) {
             <Text style={styles.benfitstext}>Pricing</Text>
             <Text style={styles.benfitstext}>200$</Text>
           </View>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}onPress={()=>{
+            Alert.alert(
+              "Thank You !",
+              "",
+              [
+                {
+                  text: "Ok",
+                  onPress: () => navigation.navigate('Chat'),
+                  style: "ok",
+                },
+              ],
+            );
+          }}>
               <Text style={styles.buttontext}>Select Pack</Text>
           </TouchableOpacity>
         </View>
@@ -128,7 +165,19 @@ export default function Subscriptions({navigation}) {
             <Text style={styles.benfitstext}>Pricing</Text>
             <Text style={styles.benfitstext}>350$</Text>
           </View>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}onPress={()=>{
+            Alert.alert(
+              "Thank You !",
+              "",
+              [
+                {
+                  text: "Ok",
+                  onPress: () => navigation.navigate('Chat'),
+                  style: "ok",
+                },
+              ],
+            );
+          }}>
               <Text style={styles.buttontext}>Select Pack</Text>
           </TouchableOpacity>
         </View>

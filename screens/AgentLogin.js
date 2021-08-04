@@ -10,8 +10,6 @@ import {
 } from 'react-native';
 import logo from '../images/logo_white.png';
 import back from '../images/back.png';
-import google from '../images/google.png';
-import facebook from '../images/fb.png';
 export default function AgentLogin({navigation}) {
   const [email, setemail] = useState(null);
   const [password, setpassword] = useState(null);
@@ -32,7 +30,8 @@ export default function AgentLogin({navigation}) {
           />
         </View>
         <TouchableOpacity
-          style={{justifyContent: 'center', flex: 1, marginLeft: 10}} onPress={()=> navigation.navigate('Login')}>
+          style={{justifyContent: 'center', flex: 1, marginLeft: 10}}
+          onPress={() => navigation.navigate('Login')}>
           <Image source={back} style={{width: 30, height: 20}} />
         </TouchableOpacity>
       </View>
@@ -48,7 +47,7 @@ export default function AgentLogin({navigation}) {
       <ScrollView style={{width: '100%', height: '100%'}}>
         <View
           style={{
-            marginTop: '8%',
+            marginTop: '15%',
             paddingHorizontal: '10%',
             flex: 1,
             flexDirection: 'column',
@@ -56,9 +55,9 @@ export default function AgentLogin({navigation}) {
           <TextInput
             placeholder="Email"
             placeholderTextColor="#6e6c69"
-            onChangeText={(email)=>setemail(email) }
+            onChangeText={email => setemail(email)}
             value={email}
-            keyboardType='email-address'
+            keyboardType="email-address"
             style={{
               fontSize: 18,
               paddingLeft: 15,
@@ -73,7 +72,7 @@ export default function AgentLogin({navigation}) {
           <TextInput
             placeholder="Password"
             placeholderTextColor="#6e6c69"
-            onChangeText={(password)=>setpassword(password) }
+            onChangeText={password => setpassword(password)}
             value={password}
             style={{
               fontSize: 18,
@@ -87,38 +86,20 @@ export default function AgentLogin({navigation}) {
             }}
           />
         </View>
-        <TouchableOpacity style={{}}>
-          <Text
-            style={{
-              fontSize: 14,
-              color: '#ff389c',
-              paddingLeft:'14%',
-              marginTop:'4%'
-            }}>
-            Forgot Password
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#ff389c',
+            alignSelf: 'center',
+            marginTop: '10%',
+            paddingVertical: 10,
+            borderRadius: 30,
+            width: '80%',
+          }}
+          onPress={() => navigation.navigate('Terms')}>
+          <Text style={{textAlign: 'center', fontSize: 18, color: 'white'}}>
+            Login
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{backgroundColor:'#ff389c',alignSelf:'center',marginTop:'10%',paddingVertical:10,borderRadius:30,width:'80%'}}>
-            <Text style={{textAlign:'center',fontSize:18,color:'white'}}>Login</Text>
-        </TouchableOpacity>
-        <Text style={{textAlign:'center',fontSize:18,marginVertical:'8%'}}>OR</Text>
-        <View>
-          <TouchableOpacity style={styles.button}>
-            <Image source={google} style={styles.btnImg} />
-            <Text style={styles.btnTxt}>Sign in with Google</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button2}>
-            <Image source={facebook} style={styles.btnImg} />
-            <Text style={styles.btnTxt}>Sign in with FaceBook</Text>
-          </TouchableOpacity>
-        </View>
-        <TouchableOpacity
-            style={{ marginTop: 20,marginBottom:20 }}
-            onPress={()=> navigation.navigate('AgentSignup')}>
-            <Text style={{ textAlign: "center", marginLeft: 0, paddingLeft: 0,color:'black'}}>
-              Don't Have an Account ? <Text style={{ color: "#E9446A" }}>Sign up</Text>
-            </Text>
-          </TouchableOpacity>
       </ScrollView>
     </View>
   );
@@ -159,6 +140,6 @@ const styles = StyleSheet.create({
     marginTop: '3%',
     elevation: 4,
     borderRadius: 30,
-    marginBottom:15
+    marginBottom: 15,
   },
 });

@@ -7,6 +7,7 @@ import {
   Text,
   ScrollView,
   StyleSheet,
+  Alert
 } from 'react-native';
 import logo from '../images/logo_white.png';
 import back from '../images/back.png';
@@ -83,7 +84,7 @@ export default function AgentSignup({navigation}) {
           fontWeight: 'bold',
           marginBottom: 40,
         }}>
-        Agent Register
+        Model Register
       </Text>
       <ScrollView style={{width: '100%', height: '100%'}}>
         <View
@@ -468,33 +469,22 @@ export default function AgentSignup({navigation}) {
             paddingVertical: 10,
             borderRadius: 30,
             width: '80%',
-          }} onPress={()=> navigation.navigate('AgentContainer')}>
+            marginBottom:'5%'
+          }} onPress={()=>{
+            Alert.alert(
+              "Profile registered successfully",
+              "",
+              [
+                {
+                  text: "Ok",
+                  onPress: () => navigation.navigate('Home'),
+                  style: "ok",
+                },
+              ],
+            );
+          }}>
           <Text style={{textAlign: 'center', fontSize: 18, color: 'white'}}>
             Signup
-          </Text>
-        </TouchableOpacity>
-        <Text style={{textAlign: 'center', fontSize: 18, marginVertical: '8%'}}>
-          OR
-        </Text>
-        <View>
-          <TouchableOpacity style={styles.button}>
-            <Image source={google} style={styles.btnImg} />
-            <Text style={styles.btnTxt}>Sign up with Google</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button2}>
-            <Image source={facebook} style={styles.btnImg} />
-            <Text style={styles.btnTxt}>Sign up with FaceBook</Text>
-          </TouchableOpacity>
-        </View>
-        <TouchableOpacity style={{marginTop: 20, marginBottom: 20}} onPress={()=> navigation.navigate('AgentLogin')}>
-          <Text
-            style={{
-              textAlign: 'center',
-              marginLeft: 0,
-              paddingLeft: 0,
-              color: 'black',
-            }}>
-            Have an Account ? <Text style={{color: '#E9446A'}}>Login</Text>
           </Text>
         </TouchableOpacity>
       </ScrollView>

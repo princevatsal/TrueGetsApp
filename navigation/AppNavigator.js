@@ -7,6 +7,8 @@ import AuthStack from './AuthStack';
 import AppStack from './AppStack';
 
 import LoadingStack from './LoadingStack';
+
+import AgentStack from './AgentStack';
 const MainStack = createStackNavigator();
 
 const AppNavigator = () => {
@@ -16,6 +18,7 @@ const AppNavigator = () => {
                 <MainStack.Screen name="AuthStack" component={AuthStack}></MainStack.Screen>
                 <MainStack.Screen name="AppStack" component={AppStack}></MainStack.Screen>
                 <MainStack.Screen name="LoadingStack" component={LoadingStack}></MainStack.Screen>
+                <MainStack.Screen name="AgentStack" component={AgentStack}></MainStack.Screen>
             </MainStack.Navigator>
         </NavigationContainer>
     )

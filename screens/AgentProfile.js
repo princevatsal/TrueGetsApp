@@ -32,7 +32,7 @@ export default function AgentProfile({navigation}) {
         <Image source={Model1} style={styles.image} />
         <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
           <Text style={styles.name}>Senorita</Text>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity style={styles.btn} onPress={()=> navigation.navigate('AuthStack')}>
             <Text style={styles.btntext}>Chat</Text>
           </TouchableOpacity>
         </View>

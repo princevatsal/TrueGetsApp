@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 import logo from '../images/logo_white.png';
 import back from '../images/back.png';
-import Model1 from '../images/Model2.jpg';
+import Model1 from '../images/man1.jpg';
 import BotttomBar1 from '../components/BottomBar1';
-export default function AgentModuleProfile({navigation}) {
+export default function UserProfile({navigation}) {
   return (
     <>
     <View style={{flex: 1}}>
@@ -33,13 +33,13 @@ export default function AgentModuleProfile({navigation}) {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <Text style={styles.name}>Senorita</Text>
+          <Text style={styles.name}>David</Text>
         </View>
         <Text style={styles.name2}>About Me :</Text>
         <Text style={styles.about}>
-          I am a young girl who at such a young age have made me suffer a lot in
+          I am a young boy who at such a young age have made me suffer a lot in
           love. I have a strong personality, I believe in loyalty and a great
-          sense of humor. I am a romantic girl, and I know how to make every day
+          sense of humor. I am a romantic boy, and I know how to make every day
           special and romantic things. I am never sad, I am always in a good
           mood
         </Text>
@@ -89,7 +89,6 @@ export default function AgentModuleProfile({navigation}) {
         </TouchableOpacity>
       </ScrollView>
     </View>
-    <BotttomBar1 active="Profile" navigation={navigation} />
     </>
   );
 }
@@ -161,8 +160,7 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     paddingVertical: 10,
     borderRadius: 30,
-    width: '80%',
-    marginBottom:'13%'
+    width: '80%'
   },
   
 });
